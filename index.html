@@ -8,52 +8,68 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
   <title>Webdev | task</title>
 </head>
 <body class="body-container">
-  <header class="header"></header>
-  <nav class="navigation">
-    <ul class="navigation__list">
-      <li class="navigation__item">About</li>
-      <li class="navigation__item">Syllabus</li>
-      <li class="navigation__logo"><img src="" alt="Logo"></li>
-      <li class="navigation__item">Projects</li>
-      <li class="navigation__item">FAQ</li>
+  <header class="header">
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item active-link"><a href="#">About</a></li>
+        <li class="navigation__item"><a href="#">Syllabus</a></li>
+        <li class="navigation__logo"><a href=""><img src="assets/icons/main-logo.svg" alt="Logo"></a></li>
+        <li class="navigation__item"><a href="#">Projects</a></li>
+        <li class="navigation__item"><a href="#">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="sections yourlife">
+    <div class="yourlife__title">
+      <h1 class="heading-1">Your life is webdev</h1>
+      <p class="yourlife__para">Whatever the approach to development may be, the final program must satisfy some fundamental properties</p>
+      <button type="button" class="btn btn-default">Get started</button>
+    </div>
+    <ul class="yourlife__socials">
+      <li><img src="assets/icons/mail.svg" alt="E-mail"></li>
+      <li><img src="assets/icons/fb.svg" alt="Facebook"></li>
+      <li><img src="assets/icons/ig.svg" alt="Instagram"></li>
+      <li><img src="assets/icons/yt.svg" alt="Youtube"></li>
     </ul>
-  </nav>
-  <div class="header__title">
-    <h1 class="heading-1">Your life is webdev</h1>
-    <p class="header__para">Whatever the approach to development may be, the final program must satisfy some fundamental properties</p>
-    <button type="button" class="btn btn-default">Get started</button>
-  </div>
-  <ul class="header__socials">
-    <li><img src="" alt="E-mail"></li>
-    <li><img src="" alt="Facebook"></li>
-    <li><img src="" alt="Instagram"></li>
-    <li><img src="" alt="Youtube"></li>
-  </ul>
-  <section class="section section-generic">
+  </section>
+  <section class="sections section-generic">
     <div class="section-generic__text">
-      <h2 class="heading-2"><strong>Rappresent your idea with <i>a smart design</i></strong></h2> 
-      <p class="section__para">Tasks accompanying and related to programming include: testing, debugging, source code maintenance, implementation of build systems, and management of derived artifacts, such as the machine code of computer programs.</p>
+      <h2 class="heading-2">Rappresent your idea with a smart design</h2> 
+      <p class="section__para">Tasks accompanying and related to programming include: testing, debugging, source code maintenance, <strong>implementation of build systems</strong>, and management of derived artifacts, such as the machine code of computer programs.</p>
       <button type="button" class="btn btn-default">Get started</button>
     </div>
     <div class="section-generic__img">
-      <img src="" alt="Image of designers">
+      <img src="assets/pexels-thisisengineering-3862131.jpg" alt="Image of designers">
     </div>
   </section>
-  <section class="sections community">
+  <section class="sections section-generic community">
     <div class="community__left">
-      <h3 class="heading-3">Our community</h3>
-      <p class="section__para">A hacker is any skilled computer expert that uses their technical knowledge to overcome a problem, but it can also mean a security hacker in common language</p>
+      <div class="community__left-content">
+        <img src="./assets/user.jpg" alt="User" class="community__user">
+        <div class="community__text">
+          <h3 class="heading-3">Our community</h3>
+          <p class="section__para">A hacker is any skilled computer expert that uses their technical knowledge to overcome a problem, but it can also mean a security hacker in common language</p>
+        </div>
+      </div>
     </div>
     <div class="community__right">
-      <div class="community__gallery"></div>
+      <div class="community__gallery-slider"><img src="./assets/icons/arrow.svg" alt="" class="back slider-arrow"><span id="currentImg">1</span><span class="separator"> / </span><span id="outOfImgs">5</span><img src="./assets/icons/arrow.svg" alt="" class="slider-arrow forward"></div>
+      <div class="community__gallery">
+        <img class="gallery-img" src="assets/pexels-thisisengineering-3861972.jpg" alt="Image" id="gallery-1">
+        <img class="gallery-img gallery-passive" src="assets/pexels-thisisengineering-3862610.jpg" alt="Image" id="gallery-2">
+        <img class="gallery-img gallery-passive" src="assets/pexels-thisisengineering-3861958.jpg" alt="Image" id="gallery-3">
+        <img class="gallery-img gallery-passive" src="assets/pexels-olha-ruskykh-7504837.jpg" alt="Image" id="gallery-4">
+        <img class="gallery-img gallery-passive" src="assets/pexels-christina-morillo-1181263.jpg" alt="Image" id="gallery-5">
+      </div>
     </div>
   </section>
   <section class="sections section-generic">
     <div class="section-generic__img">
-      <img src="" alt="Image of designers">
+      <img src="assets/pexels-thisisengineering-3861964.jpg" alt="Image of computing">
     </div>
     <div class="section-generic__text">
       <h2 class="heading-2"><strong>Implement right code</strong></h2> 
@@ -61,26 +77,31 @@
       <button type="button" class="btn btn-default">Learn more</button>
     </div>
   </section>
-  <section class="sections signup">
-    <h2 class="heading-2">Sign up for our newsletter</h2>
-    <form action="">
-      <input type="email" id="email" name="email" placeholder="E-mail">
-      <button class="btn btn-default" type="submit">
-        <img src="" alt="Submit">
-      </button>
-    </form>
+  <section class="sections misc-sections signup">
+      <h2 class="heading-2">Sign up for our newsletter</h2>
+      <form class="signup__form" action="">
+        <input type="email" id="email" name="email" placeholder="E-mail">
+        <button class="btn btn-default" type="submit">
+          <img src="assets/icons/check.svg" alt="Submit">
+        </button>
+      </form>
   </section>
-  <section class="sections download-app"></section>
+  <section class="sections misc-sections download-app">
     <h2 class="heading-2">Download the App</h2>
     <p class="section__para">Machine code was the language of early programs, written in the instruction set of the particular machine, often in binary notation.</p>
-    <button type="button" class="btn btn-store"><span>Apple store</span><img src="" alt="App Store"></button>
-    <button type="button" class="btn btn-store"><span>Play market</span><img src="" alt="Play Market"></button>
+    <div class="download-app__buttons">
+      <button type="button" class="btn btn-store"><span class="market-text">Apple store</span><span class="market-img"><img src="assets/icons/apple.svg" alt="App Store"></span></button>
+      <button type="button" class="btn btn-store"><span class="market-text">Play market</span><span class="market-img"><img src="assets/icons/android.svg" alt="Play Market"></span></button>
+    </div>
+  </section>
   <footer class="footer">
-    <ul class="footer__navigation">
-      <li class="footer__navigation-item">Credit</li>
-      <li class="footer__navigation-item">Privacy</li>
-      <li class="footer__navigation-item">Our teams</li>
-    </ul>
+    <nav class="footer__navigation">
+      <ul>
+        <li class="footer__navigation-item"><a href="#">Credit</a></li>
+        <li class="footer__navigation-item"><a href="#">Privacy</a></li>
+        <li class="footer__navigation-item"><a href="#">Our&nbsp;teams</a></li>
+      </ul>
+    </nav>
     <img class="footer__logo" src="assets/icons/main-logo.svg" alt="Logo">  
     <p class="section__para">Re-built by ivnteterin for <a href="https://rs.school/">RSS</a> webdev task at 2022.</p>
   </footer>
