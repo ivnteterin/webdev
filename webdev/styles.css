@@ -221,6 +221,7 @@ body {
   background-position: center;
   color:white;
   text-align: center;
+  min-height: 60rem;
 }
 
 .yourlife__title {
