@@ -313,6 +313,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
 }
 
 .section-generic__text {
