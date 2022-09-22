@@ -292,7 +292,7 @@ body {
 }
 
 .yourlife__title .btn {
-  animation: 1s ease-out 1.5s 1 opacity;
+  animation: 1s ease-out 1.2s 1 opacity;
   animation-fill-mode: forwards;
 }
 
@@ -696,5 +696,33 @@ padding: 1.5rem;
   }
 }
 
+/*////////////////////////////MISC ANIMATIONS////////////////////////////*/
 
+.show {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.show.active {
+  transform: translateY(0);
+  opacity: 1;
+}
 
+.showToLeft {
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.showToLeft.active, .showToRight.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.showToRight {
+  position: relative;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
