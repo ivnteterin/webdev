@@ -255,7 +255,7 @@ body {
 .yourlife__para {
   font-size: 1.8rem;
   max-width: 50rem;
-  padding: 0 2rem;
+  padding: 0 3.5rem;
 }
 
 .yourlife__socials {
@@ -285,7 +285,7 @@ body {
 
 @media only screen and (max-width: 25em) { /*400px*/
   .yourlife__para {
-    padding: 0 1.5rem;
+    padding: 0 2.5rem;
   }
 }
 
